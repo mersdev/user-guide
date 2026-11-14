@@ -16,7 +16,8 @@ function bundle(text,prelude=''){const names=[...text.matchAll(/export\s+(?:cons
 const kit=bundle(await read('src/vendor/iso-kit.mjs'));
 const lathe=bundle(await read('src/vendor/lathe.mjs'),'const {cameraOf,iso,pathOf}=k;');
 const model=bundle(await read('src/model.js'));
-const libraries='const k='+kit+';const G='+lathe+';const figureModel='+model+';';
+const viewer=bundle(await read('src/viewer.js'),'const geometry=figureModel;');
+const libraries='const k='+kit+';const G='+lathe+';const figureModel='+model+';const partViewer='+viewer+';';
 const orders={fits:{},recline:{},fold:{},width:{}};
 for(const fit of new Set(product.journeys[0].steps.map(s=>s.fit).filter(Boolean)))orders.fits[fit]=drawing(product,{fit}).scene.map(i=>({id:i.id,key:i.key,move:i.move}));
 if(product.kind==='chair'){const max=product.mesh?31:65;for(let angle=0;angle<=max;angle+=4)orders.recline[angle]=drawing(product,{recline:angle}).scene.map(i=>i.id);orders.recline[max]=drawing(product,{recline:max}).scene.map(i=>i.id);if(product.parts.legrest)for(const fold of[0,15,30,45,60,75,90])orders.fold[fold]=drawing(product,{fold}).scene.map(i=>i.id);}

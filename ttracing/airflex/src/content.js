@@ -38,3 +38,15 @@ export const product={
 };
 
 [null,"casters","lift","arms","seat","mechanism","seat",null].forEach((fit,i)=>{product.journeys[0].steps[i].fit=fit;});
+
+// Each step chooses a task-specific camera; other parts retain their own best view.
+product.journeys.find(j=>j.id==='assembly').steps[0].view='overview';
+product.journeys.find(j=>j.id==='assembly').steps[7].view='overview';
+product.journeys.find(j=>j.id==='adjust').steps[0].view='lever';
+product.journeys.find(j=>j.id==='adjust').steps[1].view='lever';
+product.journeys.find(j=>j.id==='adjust').steps[2].view='tension';
+product.journeys.find(j=>j.id==='controls').steps[0].view='mechanism';
+product.journeys.find(j=>j.id==='controls').steps[1].view='lever';
+product.journeys.find(j=>j.id==='controls').steps[2].view='tension';
+product.journeys.find(j=>j.id==='care').steps[0].view='seatTop';
+product.journeys.find(j=>j.id==='care').steps[3].view='arm';

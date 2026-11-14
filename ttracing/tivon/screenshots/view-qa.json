@@ -1,0 +1,12 @@
+{
+  "id": "tivon",
+  "steps": 25,
+  "errors": [],
+  "network": [],
+  "desktop": true,
+  "mobile390": true,
+  "rotation": true,
+  "zoom": true,
+  "keyboard": true,
+  "partReferences": true
+}

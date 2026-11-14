@@ -27,3 +27,13 @@ Detailed interaction results: screenshots/browser-qa.json. Inspected desktop, mo
 The diagram is an explanatory surface schematic; it does not measure or inspect a physical product. Manufacturer discrepancies and undocumented controls remain explicit in the guide and references/SOURCES.md. Confirmations are the owner’s device-local review records, never inferred from animation.
 
 The Impeccable detector on changed UI targets returned no findings. Independent review requested fitting/mechanism demonstrations, mobile task entry and product records; the reviewer scored the corrections resolved (ship), as recorded in references/REVIEW.md.
+
+## Part close-up and vertical-orbit update
+
+All 25 steps were exercised against their assigned camera profile. Every close-up rendered visible geometry. Automatic camera selection, inline part references (without leaving the guide step), individual fittings, vertical/horizontal drag, bottom/top presets, zoom, Best part / Whole product return, and canvas keyboard controls passed. Desktop 1440px and mobile 390px had no overflow, network requests or browser errors. Native bottom views changed the actual rendered pixels with normal motion enabled.
+
+The existing complete-journey confirmation/reset, Explore, source PDF download, keyboard ranges, fitting/pose controls, local-storage fallback, reduced-motion stillness and offscreen suspension checks also passed after the camera integration. Pure geometry checks validate finite 3D surfaces and preserve the area of concave prism caps, including the five-spoke base. The UI detector returned no findings.
+
+Captures: `screenshots/closeup-desktop.png`, `closeup-mobile.png`, `closeup-part.png`, and `screenshots/views/` for every step. Automated camera results: `screenshots/view-qa.json`. Final review corrections are recorded in `references/REVIEW.md`.
+
+The independent review’s single requested correction (Maxx legrest rod contrast) was resolved and verified at desktop and 390px mobile scale. The verdict pass returned ship for that fix. Maxx has dedicated `screenshots/views/legrest-{1,2}-mobile.png` captures alongside the desktop equivalents.

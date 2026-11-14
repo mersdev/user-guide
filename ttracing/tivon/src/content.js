@@ -43,3 +43,13 @@ export const product={
 };
 
 [null,"frame","frame","feet","brackets","top","cables","accessories",null,"cables","lightstrip",null].forEach((fit,i)=>{product.journeys[0].steps[i].fit=fit;});
+
+// Each step chooses a task-specific camera; other parts retain their own best view.
+product.journeys.find(j=>j.id==='assembly').steps[0].view='overview';
+product.journeys.find(j=>j.id==='assembly').steps[3].view='footBase';
+product.journeys.find(j=>j.id==='assembly').steps[4].view='brackets';
+product.journeys.find(j=>j.id==='assembly').steps[8].view='overview';
+product.journeys.find(j=>j.id==='assembly').steps[10].view='accessory';
+product.journeys.find(j=>j.id==='height').steps[3].view='foot';
+product.journeys.find(j=>j.id==='reset').steps[3].view='deskTop';
+product.journeys[0].steps[10].viewDetail=2;

@@ -41,3 +41,7 @@ Use the existing layout as a starting point: brand/product heading, journey choi
 Before creating a new manual, review the product, brand/logo, layout, typography, and color palette with the user. Present a concise visual direction or preview and obtain confirmation before production. Record agreed choices in that product’s `DESIGN.md`. Branding and colors are flexible; the Simplus palette applies only to its existing guides.
 
 Keep manuals independent. Confirm language per project. Preserve source discrepancies and safety notices. Simulations never confirm physical completion; review confirmations remain device-local.
+
+## Product Inspection Views
+
+When a step or instruction refers to a part, automatically frame that part closely from an angle suited to the task. Provide clickable part references where instructions mention other parts. Castors and underside fittings should open from below, mounting joints from the relevant side, and alignment marks from above. Allow horizontal and vertical rotation, including bottom inspection, plus zoom, keyboard controls, and a return to the recommended part view. Keep these controls usable on mobile and with reduced motion. This is the user’s standing requirement for future manuals.

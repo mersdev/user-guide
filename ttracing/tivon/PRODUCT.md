@@ -26,3 +26,5 @@ Surface/assembly schematic with four-tone solid geometry. Motion demonstrates co
 ## Access
 
 390px stacked layout, direct mobile step entry, explicit View illustration links, keyboard alternatives to diagram selection, native range controls, visible focus, reduced-motion stills, paused offscreen animation, and usable instructions when local storage is unavailable.
+
+Part inspection requirement: automatically zoom and choose a task-specific angle for each part. Users can rotate horizontally and vertically to inspect the underside, zoom, select individual fittings, and return to the recommended view. Inline part references preserve the current instruction step.
