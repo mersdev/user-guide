@@ -1,0 +1,14 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {products,journeyKeys} from './src/content.js';
+const root=new URL('.',import.meta.url),src=new URL('src/',root);
+const read=path=>readFile(new URL(path,src),'utf8');
+const [[id,p]]=Object.entries(products);
+const template=await read('template.html'),css=await read('styles.css'),app=await read('app.js'),drawing=await read('drawing.js');
+const logo='data:image/png;base64,'+(await readFile(new URL('assets/simplus-sg-logo.png',src))).toString('base64');
+const exports=[...drawing.matchAll(/export\s+(?:function|const)\s+(\w+)/g)].map(m=>m[1]);
+const module='(()=>{'+drawing.replace(/export\s+(?=function|const)/g,'')+'\nreturn {'+exports.join(',')+'};})()';
+const data='const products='+JSON.stringify({[id]:p})+';const journeyKeys='+JSON.stringify(journeyKeys)+';const drawings={'+id+':'+module+'};';
+const script=app.replace(/^import[^\n]+\n/,data+'\n').replace(/<\/script/gi,'<\\/script');
+const html=template.replaceAll('__PRODUCT_ID__',id).replaceAll('__PRODUCT_TITLE__',p.model+' '+p.name).replaceAll('__PRODUCT_DESCRIPTION__','Simplus '+p.model+' '+p.name+': setup, everyday use, care and help.').replaceAll('__PRODUCT_MODEL__',p.model).replaceAll('__PRODUCT_MANUAL__',p.manual).replaceAll('__PRODUCT_RETURN__',p.returnProducts||'https://sg.simplus.online/en/products').replace('src="assets/simplus-sg-logo.png"','src="'+logo+'"').replace('<link rel="stylesheet" href="styles.css">','<style>\n'+css+'\n</style>').replace('<script type="module" src="app.js"></script>','<script type="module">\n'+script+'\n</script>');
+await writeFile(new URL('index.html',root),html);
+console.log(p.model+': built self-contained index.html');

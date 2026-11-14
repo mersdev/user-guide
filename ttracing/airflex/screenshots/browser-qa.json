@@ -1,0 +1,13 @@
+{
+  "product": "airflex",
+  "journeys": 4,
+  "steps": 20,
+  "allJourneysConfirmedAndReset": true,
+  "allPartsExplored": true,
+  "keyboardRange": true,
+  "reducedMotion": true,
+  "mobile390": true,
+  "pdfDownload": true,
+  "offlineRequests": 0,
+  "errors": []
+}

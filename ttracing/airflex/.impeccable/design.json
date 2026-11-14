@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "scope": "airflex",
+  "mode": "Read / Operate",
+  "approved": "2026-11-14",
+  "authority": "Official TTRacing installation website plus user-approved local layout preview",
+  "tokens": {
+    "canvas": "#ffffff",
+    "surface": "#f5f5f5",
+    "ink": "#111111",
+    "muted": "#595959",
+    "border": "#dedede",
+    "accent": "#f24a52",
+    "focus": "#b82430",
+    "headingFont": "Poppins",
+    "headingWeight": 700,
+    "bodyFont": "Outfit",
+    "bodyWeights": [
+      400,
+      600
+    ],
+    "cardRadius": 16,
+    "controlRadius": 50,
+    "desktopMaxWidth": 1280,
+    "mobileBreakpoint": 760
+  },
+  "language": "en",
+  "layout": "Product heading and journeys; anatomy figure beside source-based instruction; stacked at 390px",
+  "runtime": "single independent index.html"
+}

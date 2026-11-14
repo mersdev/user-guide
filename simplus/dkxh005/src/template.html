@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="__PRODUCT_DESCRIPTION__">
+  <title>__PRODUCT_TITLE__ · Simplus</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%234d61a3'/%3E%3Ctext x='8' y='24' fill='white' font-size='25'%3Es%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body data-product="__PRODUCT_ID__">
+  <a class="skip-link" href="#instruction">Skip to instructions</a>
+  <main id="app">
+    <section class="tasks" aria-labelledby="product-name"><div class="manual-heading"><img class="manual-logo" src="assets/simplus-sg-logo.png" width="150" height="54" alt="Simplus"><div><h1 id="product-name"></h1><p id="model"></p></div><a id="return-products" class="return-products" href="__PRODUCT_RETURN__">Back to products</a></div><nav id="journeys" aria-label="Choose a journey"></nav></section>
+    <div class="workbench">
+      <figure class="figure-card iso-plate" aria-labelledby="figure-title">
+        <div class="figure-top"><div class="mode-switch" role="group" aria-label="Manual mode"><button data-mode="explore">Explore your product</button><button data-mode="guide">Guide me</button></div><button id="replay" class="icon-button" aria-label="Replay the current illustration"></button></div>
+        <div class="figure-label"><span id="figure-title"></span><span id="figure-number"></span></div>
+        <div id="drawing" class="drawing-stage"></div>
+        <div class="figure-bottom"><span id="figure-hint">Select a part to get to know it</span><span class="simulation-label">Interactive illustration</span></div>
+        <div id="drawing-controls" class="drawing-controls"></div>
+      </figure>
+      <section id="instruction" class="instruction" tabindex="-1" aria-labelledby="instruction-title"></section>
+    </div>
+  </main>
+  <dialog id="safety-dialog" aria-labelledby="safety-title"><div class="dialog-head"><h2 id="safety-title">Safety notes</h2><button id="safety-close" class="icon-button" aria-label="Close safety notes">×</button></div><p id="safety-product"></p><ul id="safety-list"></ul><a id="safety-manual" target="_blank" rel="noopener">Read the original manual ↗</a></dialog>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">Enable JavaScript to use this guide, or <a href="__PRODUCT_MANUAL__">read the original __PRODUCT_MODEL__ manual</a>.</p></noscript>
+</body>
+</html>
